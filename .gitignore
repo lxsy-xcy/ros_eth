@@ -6,3 +6,4 @@ git/*
 */.catkin_tools/*
 smb_ws/src/smb_common
 smb_ws/src/teleop_twist_keyboard
+.vscode
