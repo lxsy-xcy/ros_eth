@@ -1,0 +1,3 @@
+laser_subscriber_topic: /scan
+queue_size: 10
+pc_subscriber_topic: /rslidar_points
