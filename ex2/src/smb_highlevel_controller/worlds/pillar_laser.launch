@@ -1,5 +1,0 @@
-<launch>
-    <include file="$(find smb_gazebo)/launch/smb_gazebo.launch">
-        <arg name="world_file" value="$(find smb_highlevel_controller)/worlds/singlePillar.world"/>
-    </include>
-</launch>
