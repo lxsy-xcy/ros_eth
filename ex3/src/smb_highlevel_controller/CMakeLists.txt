@@ -10,6 +10,10 @@ project(smb_highlevel_controller)
 find_package(catkin REQUIRED COMPONENTS
   roscpp
   sensor_msgs
+  geometry_msgs
+  visualization_msgs
+  tf2_ros
+  tf2_geometry_msgs
 )
 
 ## System dependencies are found with CMake's conventions
@@ -108,6 +112,10 @@ catkin_package(
  CATKIN_DEPENDS 
     roscpp 
     sensor_msgs
+    geometry_msgs
+    visualization_msgs
+    tf2_ros
+    tf2_geometry_msgs
 #  DEPENDS system_lib
 )
 
