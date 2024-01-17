@@ -26,12 +26,20 @@ namespace smb_highlevel_controller
         auto range_max = message.range_max;
         
         auto min_dist = range_max;
-        for(auto i: message.ranges)
+        auto min_index = 0;
+        for(int i=0;i<message.ranges.size();i++)
         {
-            if(i>=range_min&&i < min_dist)
-                min_dist = i;
+            if(message.ranges[i]>=range_min&&message.ranges[i] < min_dist)
+            {
+                min_dist = message.ranges[i];
+                min_index = i;
+            }
         }
-        ROS_INFO("min_dist: %f\n", min_dist);
+        
+        auto pillar_dist = min_dist;
+        auto pillar_angle = message.angle_min + min_index*message.angle_increment;
+
+        ROS_INFO_STREAM("pillar_dist: "<<pillar_dist<<" pillar_angle: "<<pillar_angle<<std::endl);
     }
     
 
@@ -44,7 +52,5 @@ namespace smb_highlevel_controller
             return false;
         return true;
     }
-
-
 
 }
