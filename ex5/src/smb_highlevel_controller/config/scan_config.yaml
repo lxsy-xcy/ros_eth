@@ -1,0 +1,5 @@
+laser_subscriber_topic: /scan
+queue_size: 10
+kp_linear: 0.1
+kp_angular: 1
+start_and_stop_src_name: /start_stop

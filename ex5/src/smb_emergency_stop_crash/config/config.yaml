@@ -1,0 +1,4 @@
+imu_subscriber_topic: /imu0
+queue_size: 10
+start_and_stop_src_name: /start_stop
+imu_threshold: 3.5
